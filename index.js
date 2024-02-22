@@ -4,15 +4,18 @@ host + /api/auth
 */
 
 const express = require('express');
-const { dbConnection } = require('./database/config');
 require('dotenv').config()
 const cors = require('cors')
+const { dbConnection } = require('./database/config');
 // console.log(process.env)
 //crear el servidor de express
 const app = express();
 
+
 //base de datos
 dbConnection();
+
+//cors
 app.use(cors())
 
 // directorio publico
