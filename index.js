@@ -28,6 +28,10 @@ app.use(express.json());
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/events',require('./routes/events'));
 // auth crear, login renew
+
+app.get('*',(req,res)=>{
+  res.sendFile(__dirname+'/public/index.html')
+})
 //crud: evenetos
 
 
